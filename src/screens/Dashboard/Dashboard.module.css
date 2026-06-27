@@ -1,0 +1,77 @@
+.page {
+    min-height: 100svh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 24px 20px 40px;
+}
+
+.container {
+    width: min(860px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.metricsRow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.privacyStrip {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--sage-dim);
+    border-radius: var(--radius-sm, 8px);
+    background: var(--sage-bg);
+}
+
+.stripIcon {
+    width: 16px;
+    height: 16px;
+    color: var(--sage-light);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.privacyText {
+    margin: 0;
+    color: var(--text-sec);
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.filtersSection {
+    display: flex;
+    align-items: center;
+}
+
+.flagsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+@media (max-width: 860px) {
+    .metricsRow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .main {
+        padding-inline: 16px;
+    }
+
+    .metricsRow {
+        grid-template-columns: 1fr;
+    }
+}

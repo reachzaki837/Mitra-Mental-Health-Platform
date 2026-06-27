@@ -1,0 +1,141 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: var(--card);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.label {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.title {
+    margin: 4px 0 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.note {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text-sec);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pillActive {
+    border-color: var(--sage-dim);
+    background: var(--sage-bg);
+    color: var(--sage);
+}
+
+.helper {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.customAsk {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 92px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.askButton {
+    align-self: end;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--sage-dim);
+    border-radius: var(--radius-pill, 20px);
+    background: var(--sage-bg);
+    color: var(--sage);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.askButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error {
+    padding: 12px 14px;
+    border: 1px solid var(--high-bdr);
+    border-radius: var(--radius-sm, 8px);
+    background: var(--high-bg);
+    color: var(--high);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.output {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: #fff;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 640px) {
+    .customAsk {
+        grid-template-columns: 1fr;
+    }
+
+    .askButton {
+        width: 100%;
+    }
+}

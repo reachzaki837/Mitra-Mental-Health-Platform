@@ -1,0 +1,35 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tab {
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    padding: 8px 14px;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: var(--card-hover);
+    color: var(--text);
+}
+
+.active {
+    border-color: var(--sage);
+    background: var(--sage-bg);
+    color: var(--sage);
+}
+
+.inactive {
+    border-color: var(--border);
+}

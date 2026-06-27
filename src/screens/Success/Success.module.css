@@ -1,0 +1,94 @@
+.page {
+    min-height: 100svh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 40px;
+}
+
+.container {
+    width: min(460px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.iconCircle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--sage);
+    border-radius: 50%;
+    background: var(--sage-bg);
+    color: var(--sage);
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+}
+
+.heading {
+    margin: 0;
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.body {
+    margin: 0;
+    max-width: 380px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.teleCard {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 12px 14px;
+    border: 1px solid var(--sage-dim);
+    border-radius: var(--radius, 12px);
+    background: var(--sage-bg);
+}
+
+.phoneIcon {
+    width: 18px;
+    height: 18px;
+    color: var(--sage-light);
+}
+
+.teleNumber {
+    color: var(--sage);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: var(--radius-pill, 20px);
+    background: var(--sage);
+    color: #0c1710;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}

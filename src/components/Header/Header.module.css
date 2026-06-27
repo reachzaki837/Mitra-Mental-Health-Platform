@@ -1,0 +1,103 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 56px;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.brandMark,
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brandMark {
+    color: var(--sage);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.brandCopy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.wordmark {
+    color: var(--sage);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border-light);
+    flex-shrink: 0;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.urgentPill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 0 12px;
+    border: 1px solid var(--high-bdr);
+    border-radius: var(--radius-pill, 20px);
+    background: var(--high-bg);
+    color: var(--high);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--sage-bg);
+    color: var(--text);
+}
+
+.avatarIcon {
+    width: 16px;
+    height: 16px;
+}

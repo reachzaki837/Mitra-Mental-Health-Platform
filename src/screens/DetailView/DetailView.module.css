@@ -1,0 +1,310 @@
+.page {
+    min-height: 100svh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 24px 20px 40px;
+}
+
+.container {
+    width: min(860px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-sec);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.backIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.studentHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+}
+
+.studentIdentity {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.identityRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.studentId {
+    margin: 0;
+    color: var(--text);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.studentMeta {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.primaryAction,
+.dangerAction {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: var(--radius-pill, 20px);
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.primaryAction {
+    background: var(--sage);
+    color: #0c1710;
+}
+
+.dangerAction {
+    background: var(--high-bg);
+    border-color: var(--high-bdr);
+    color: var(--high);
+}
+
+.actionIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.sectionCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: var(--card);
+}
+
+.sectionLabel {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.signalGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.signalCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm, 8px);
+    background: var(--bg);
+}
+
+.signalCardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.signalName {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.signalDrop {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.signalNumbers {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.signalInterpretation {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.high {
+    border-color: var(--high-bdr);
+}
+
+.high .signalDrop {
+    color: var(--high);
+}
+
+.moderate {
+    border-color: var(--mod-bdr);
+}
+
+.moderate .signalDrop {
+    color: var(--moderate);
+}
+
+.low {
+    border-color: var(--low-bdr);
+}
+
+.low .signalDrop {
+    color: var(--low);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timelineItem {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.timelineRail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 46px;
+}
+
+.timelineDot {
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.timelineDotActive {
+    background: var(--sage);
+}
+
+.timelineLine {
+    position: absolute;
+    top: 16px;
+    bottom: -2px;
+    width: 1px;
+    background: var(--border);
+}
+
+.timelineCopy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 16px;
+}
+
+.timelineTime {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.timelineNote {
+    margin: 0;
+    color: var(--text-sec);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.timelineNoteCurrent {
+    color: var(--text);
+}
+
+.reminderStrip {
+    padding: 12px 14px;
+    border: 1px solid var(--sage-dim);
+    border-radius: var(--radius-sm, 8px);
+    background: var(--sage-bg);
+}
+
+.reminderStrip+ :global(.panel) {
+    margin-top: 2px;
+}
+
+.reminderText {
+    margin: 0;
+    color: var(--text-sec);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.reminderLead {
+    color: var(--sage);
+    font-weight: 700;
+}
+
+@media (max-width: 720px) {
+    .studentHeader {
+        flex-direction: column;
+    }
+
+    .actions {
+        justify-content: flex-start;
+    }
+
+    .signalGrid {
+        grid-template-columns: 1fr;
+    }
+}

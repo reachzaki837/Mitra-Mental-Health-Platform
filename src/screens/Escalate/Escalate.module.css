@@ -1,0 +1,259 @@
+.page {
+    min-height: 100svh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 24px 20px 40px;
+}
+
+.container {
+    width: min(860px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-sec);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.backIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--high-bdr);
+    border-radius: var(--radius-sm, 8px);
+    background: var(--high-bg);
+}
+
+.bannerIcon {
+    width: 18px;
+    height: 18px;
+    color: var(--high);
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.bannerText {
+    margin: 0;
+    color: var(--high);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.heading {
+    margin: 0;
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.subtext {
+    margin: 6px 0 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.helpCard {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: var(--card);
+}
+
+.helpCardPrimary {
+    padding: 22px;
+    border-color: var(--sage-dim);
+    background: linear-gradient(180deg, rgba(19, 32, 25, 0.98), rgba(17, 29, 20, 0.98));
+}
+
+.helpCardSecondary {
+    padding: 16px 18px;
+}
+
+.helpCardCopy {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.helpLabel {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.helpTitle {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.helpCardSecondary .helpTitle {
+    font-size: 16px;
+}
+
+.helpSubtext,
+.helpFooter {
+    color: var(--text-sec);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.helpFooter {
+    margin-top: 4px;
+}
+
+.helpNumberBlock {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.helpNumber {
+    color: var(--sage);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+}
+
+.helpCardSecondary .helpNumber {
+    font-size: 22px;
+    letter-spacing: 0.08em;
+}
+
+.helpPhoneIcon {
+    width: 20px;
+    height: 20px;
+    color: var(--sage-light);
+}
+
+.consentCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    background: var(--card);
+    cursor: pointer;
+}
+
+.hiddenCheckbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+}
+
+.checkboxChecked {
+    border-color: var(--sage);
+    background: var(--sage);
+}
+
+.checkboxIcon {
+    width: 14px;
+    height: 14px;
+}
+
+.consentText {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.confirmButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    width: 100%;
+    border: 1px solid var(--high-bdr);
+    border-radius: var(--radius-pill, 20px);
+    background: var(--high-bg);
+    color: var(--high);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out, background 0.2s ease-out, color 0.2s ease-out;
+}
+
+.confirmButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.confirmButton:not(:disabled) {
+    background: var(--high);
+    color: #fff;
+}
+
+.footerNote {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .helpCard {
+        flex-direction: column;
+    }
+
+    .helpNumberBlock {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 560px) {
+    .main {
+        padding-inline: 16px;
+    }
+}

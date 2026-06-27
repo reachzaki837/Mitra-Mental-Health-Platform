@@ -1,0 +1,145 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--severity-border, var(--low));
+    border-radius: var(--radius, 12px);
+    background: var(--card);
+    cursor: pointer;
+    transition: background 0.2s ease-out;
+}
+
+.card:hover {
+    background: var(--card-hover);
+}
+
+.resolved {
+    opacity: 0.65;
+}
+
+.topRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.identityBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.studentRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.studentId {
+    color: var(--text);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.cohort,
+.timestamp {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.timestamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clockIcon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+.signalGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px;
+}
+
+.signalItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.signalHeader {
+    color: var(--text-sec);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.signalFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.signalCounts {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.drop {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.high {
+    color: var(--high);
+}
+
+.moderate {
+    color: var(--moderate);
+}
+
+.low {
+    color: var(--low);
+}
+
+.outcome {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm, 8px);
+    background: var(--sage-bg);
+    color: var(--text-sec);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+    .signalGrid {
+        grid-template-columns: 1fr;
+    }
+}
